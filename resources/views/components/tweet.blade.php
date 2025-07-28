@@ -86,7 +86,9 @@
     <!-- ✅ عند الضغط على التغريدة ننتقل لصفحتها -->
     <a href="{{ route('tweet.view', $tweet->id) }}">
         <div class="card-body py-4 px-7">
-            <p>{{ $tweet->content }}</p>
+           <p class="whitespace-pre-wrap break-words overflow-hidden">
+    {{ $tweet->content }}
+</p>
         </div>
     </a>
 
