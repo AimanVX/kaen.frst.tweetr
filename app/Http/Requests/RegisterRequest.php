@@ -23,11 +23,11 @@ class RegisterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'avatar' => ['required','image','max:2048'], //2048=2MP
+            'avatar' => ['required','image','max:10240'], //2048=2MP
             'name'=>['required', 'min:3', 'max:10'],
             'email'=>['required','email','max:30','min:9','unique:users,email'],
             'password'=>['required','min:8','max:30', 'confirmed'],
-            'passwoed_confirmation'
+            'password_confirmation'
         ];
     }
 }
