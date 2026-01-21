@@ -3,6 +3,8 @@ set -e
 
 php artisan config:clear || true
 php artisan cache:clear || true
+php artisan config:cache || true
+
 
 
 sed -i "s/Listen 80/Listen ${PORT:-8080}/" /etc/apache2/ports.conf || true
